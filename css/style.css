@@ -82,7 +82,7 @@ a:active {
 	color: rgb(50, 50, 248);
 }
 
-#weather-selectBox{
+#weather-selectBox {
 	display: flex;
 	width: 100%;
 	height: 30px;
@@ -92,27 +92,38 @@ a:active {
 	border-radius: 5px;
 }
 
-.game-article{
+.game-article {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap :5px;
+	gap: 5px;
 }
 
-.game-button{
+.game-button {
 	background-color: #91acc1;
-	border: none;
 	padding: 5px 10px;
 	color: white;
+	border: 1px solid #91acc1;
 	border-radius: 5px;
 	cursor: pointer;
 }
 
-.dark-button{
-	
+.game-button:hover {
+	background-color: white;
+	color: #91acc1;
 }
 
-ul a{
+ul a {
+	display: flex;
 	font-size: 20px;
+	border-radius: 5px;
+	padding: 5px;
+	transition: transform 1s;
+}
+
+ul a:hover {
+	background-color: #4d87a8;
+	color: white;
+	transform: translateY(-5px);
 }
 
 .content-box {
@@ -123,9 +134,9 @@ ul a{
 	cursor: pointer;
 }
 
-.content-box:hover{
+.content-box:hover {
 	background-color: #c8d4dc;
-	color : white;
+	color: white;
 }
 
 .album {
@@ -229,18 +240,24 @@ footer {
 	justify-content: center;
 }
 
-th{
+th {
 	background-color: #cbe9ff;
 }
-tr td{
+
+tr td {
 	background-color: white;
 }
-tr td:not(:first-child) {
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+tr td:not(:first-child) {
+	transition: box-shadow 0.3s ease;
 }
 
-tr td:not(:first-child):hover{
-	scale: 1.02;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+#escapeButton {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 12px 24px;
+	cursor: pointer;
+	transition: left 0.15s, top 0.15s;
 }

@@ -4,7 +4,7 @@ const speedGameClick = () => {
 
     const begin = Date.now();
 
-    const userAns = prompt(`${num1} + ${num2} = ?\n(50초 안에 풀어야 합니다.)`);
+    const userAns = prompt(`${num1} + ${num2} = ?\n(5초 안에 풀어야 합니다.)`);
 
     if (userAns === null) return;
 
