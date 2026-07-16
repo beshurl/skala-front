@@ -1,8 +1,4 @@
-@font-face {
-	font-family: 'Pretendard';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard.woff2') format('woff2');
-	font-style: normal;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 @font-face {
 	font-family: 'JejuStoneWall';
@@ -75,6 +71,7 @@ li a:hover {
 
 a {
 	color: #4d87a8;
+	text-decoration: none;
 }
 
 a:visited {
@@ -85,11 +82,50 @@ a:active {
 	color: rgb(50, 50, 248);
 }
 
+#weather-selectBox{
+	display: flex;
+	width: 100%;
+	height: 30px;
+	border: 2px solid #9ac5df;
+	text-align: center;
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+.game-article{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap :5px;
+}
+
+.game-button{
+	background-color: #91acc1;
+	border: none;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.dark-button{
+	
+}
+
+ul a{
+	font-size: 20px;
+}
+
 .content-box {
 	margin: 15px 0;
 	padding: 12px 20px;
 	border: 1px solid #c8d4dc;
 	border-radius: 5px;
+	cursor: pointer;
+}
+
+.content-box:hover{
+	background-color: #c8d4dc;
+	color : white;
 }
 
 .album {
@@ -191,4 +227,20 @@ footer {
 	margin-top: 50px;
 	gap: 20px;
 	justify-content: center;
+}
+
+th{
+	background-color: #cbe9ff;
+}
+tr td{
+	background-color: white;
+}
+tr td:not(:first-child) {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+tr td:not(:first-child):hover{
+	scale: 1.02;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

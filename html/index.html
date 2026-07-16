@@ -10,18 +10,20 @@
 
 <body>
 	<div class="container">
+		<button onClick="toggleDarkMode">
+		</button>
 		<header>
 			<h1 class="page-title">정준용의 상상</h1>
-			<p>스칼라에 오신 것을 환영합니다.</p>
+			<p>다양한 활동과 기록을 담은 공간입니다.</p>
 		</header>
 		<nav>
 			<h2>바로가기 메뉴</h2>
-			<ul class = "nav-section">
-				<li><a href="myClass.html">나의 수업 (myClass)</a></li>
-				<li><a href="myHoliday.html">나의 휴일 (myHoliday)</a></li>
-				<li><a href="myProfile.html">나의 프로필 (myProfile)</a></li>
-				<li><a href="myTrip.html">여행 앨범 (Album)</a></li>
-				<li><a href="signUp.html">회원가입 (Sign Up)</a></li>
+			<ul class="nav-section">
+				<a href="myClass.html">나의 수업 (myClass)</a>
+				<a href="myHoliday.html">나의 휴일 (myHoliday)</a>
+				<a href="myProfile.html">나의 프로필 (myProfile)</a>
+				<a href="myTrip.html">여행 앨범 (Album)</a>
+				<a href="signUp.html">회원가입 (Sign Up)</a>
 			</ul>
 		</nav>
 		<hr>
@@ -30,7 +32,7 @@
 				<h2>오늘의 주요 소식</h2>
 				<section>
 					<h3>⭐️ 최근 공지 및 업데이트 ⭐️</h3>
-					<article class="content-box">
+					<article class="content-box" onclick="location.href='myTrip.html'">
 						<div style="margin-top: 5px; font-weight: 600; font-size: 17px;">[신규] 준용의 블로그 개장 및 여행지 소개</div>
 						<p>준용이의 멋진 여행지 소개 글을 지금 바로 확인하세요. 소리와 영상으로 여행을 같이 경험할 수 있습니다.</p>
 						<small>작성일: <time datetime="2026-07-15">2026년 7월 15일</time></small>
@@ -38,21 +40,54 @@
 				</section>
 				<section>
 					<h3> 📸 이달의 베스트 컷</h3>
-					<figure ">
-						<img width="300" src="../assets/Image1.JPG" alt="대구 정원 사진">
+					<figure>
+						<img width=" 300" src="../assets/Image1.JPG" alt="대구 정원 사진">
 						<figcaption>대구 정원(2026년)</figcaption>
 					</figure>
 				</section>
 			</main>
 			<aside>
 				<h2>📍실시간 정보</h3>
-				<article >
-					<p>현재 위치: 광주광역시 광산구</p>
-					<p>
-						<a href="https://www.diningcode.com/list.dc?query=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%82%B0%EA%B5%AC">내
-							주변 맛집 찾기</a>
-					</p>
-				</article>
+					<article>
+						<p>
+							현재 위치: 광주광역시 광산구
+						</p>
+						<p>
+							<a href="https://www.diningcode.com/list.dc?query=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%82%B0%EA%B5%AC">
+								🍗 내 주변 맛집 찾기</a>
+						</p>
+					</article>
+					<h3>🌤️ 실시간 세계 날씨</h3>
+					<article>
+						<select id="weather-selectBox">
+							<option value="none">도시를 선택하세요</option>
+							<option value="37.56,126.97">대한민국 서울</option>
+							<option value="35.67,139.65">일본 도쿄</option>
+							<option value="39.9042,116.4074">중국 베이징</option>
+							<option value="38.9072,-77.0369">미국 워싱턴DC</option>
+							<option value="48.85,2.35">프랑스 파리</option>
+						</select>
+						<div id="weather-box">
+							<p>도시를 선택하면 좌표가 표시됩니다.</p>
+						</div>
+					</article>
+					<h3>
+						미니 게임 천국
+					</h3>
+					<article class="game-article">
+						<button class="game-button" type="button" onclick="upDownGameButtonClick()">
+							👆 업다운 게임
+						</button>
+						<button class="game-button" type="button" onclick="gradeGameButtonClick()">
+							💯 성적 계산기
+						</button>
+						<button class="game-button" type="button" onclick="showMyBag()">
+							🎒 내 가방 보기
+						</button>
+						<button class = "game-button" type="button" onClick="speedGameClick()">
+							🏃 스피드 퀴즈
+						</button>
+					</article>
 			</aside>
 		</div>
 		<hr />
@@ -62,6 +97,14 @@
 			<small>모든 태그는 웹 표준 시멘틱 태그로 작성되었습니다.</small>
 		</footer>
 	</div>
+
+	<script src="../script/upDown.js"></script>
+	<script src="../script/grade.js"></script>
+	<script src="../script/bag.js"></script>
+	<script src="../script/speedQuiz.js"></script>
+	<!-- <script src="../script/weather.js"></script> -->
+	<script type="module" src="../script/realtimeInfo.js"></script>
+
 </body>
 
 </html>
