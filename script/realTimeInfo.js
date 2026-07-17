@@ -1,4 +1,3 @@
-// 1. 방금 만든 weatherAPI.js 모듈에서 핵심 비동기 함수를 쏙 훔쳐옵니다.
 import { getLiveWeather } from './weatherAPI.js';
 
 const citySelect = document.querySelector('#weather-selectBox');

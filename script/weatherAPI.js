@@ -1,4 +1,3 @@
-// 외부에서 가져다 쓸 수 있도록 export를 함수 맨 앞에 붙입니다.
 export async function getLiveWeather(lat, lon) {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m`;
     

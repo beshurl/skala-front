@@ -3,14 +3,14 @@ const upDownGameButtonClick = () => {
     let count = 0;
 
     while (true) {
-        const userInput = prompt("1부터 50 사이의 숫자 중 컴퓨터가 생각하는 숫자는 무엇일까요?");
+        const userInput = Number(prompt("1부터 50 사이의 숫자 중 컴퓨터가 생각하는 숫자는 무엇일까요?"));
 
-        if (input === null) {
+        if (userInput === 0) {
             alert("게임을 종료합니다.");
             return;
         }
 
-        if (userInput < 1 || userInput > 50 || Number.isNaN(userInput)) {
+        if (userInput < 1 || userInput > 50) {
             alert("1부터 50 사이의 숫자를 입력해주세요.");
             continue;
         }
@@ -21,8 +21,10 @@ const upDownGameButtonClick = () => {
             alert("Up!");
         } else if (computerNum < userInput) {
             alert("Down!");
-        } else {
+        } else if (computerNum == userInput) {
             break;
+        } else {
+            alert("1부터 50 사이의 숫자를 입력해주세요.");
         }
     }
 

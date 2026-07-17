@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="sub-page">
   <div class="container">
-    <h1 class="page-title">
-      <a class="link-home" onclick="location.replace('../index.html')" >
-        ←
-      </a>
-      나의 주간 성장 시간표
-    </h1>
-    <p>수업 복습과 취업 준비를 꾸준히 하기 위해 만든 시간표입니다.</p>
+    <header class="sub-header">
+      <h1 class="page-title">
+        나의 주간 성장 시간표
+      </h1>
+      <p>수업 복습과 취업 준비를 꾸준히 하기 위해 만든 시간표입니다.</p>
+    </header>
+    <main class="sub-content class-content page-section section-news">
     <table border="1" cellpadding="7" cellspacing="0">
       <thead>
         <tr>
@@ -79,7 +79,9 @@
         </tr>
       </tbody>
     </table>
+    </main>
   </div>
+	<button id="home-button" type="button" onclick="location.href='/index.html'">🏠</button>
 </body>
 
 </html>
