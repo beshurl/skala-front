@@ -22,10 +22,13 @@ citySelect.addEventListener('change', async function(event) {
 
     if (weatherInfo) {
         weatherBox.innerHTML = `
-            <div style="display: block; border-left:3px solid #7ba4bd; margin-top : 8px; padding: 7px; padding-bottom:  0px; ">
-                <div>날씨 피드: ${cityName}</div>
-                <p>🌡️ 기온: ${weatherInfo.temp}°C</p>
-                <p>💧 습도: ${weatherInfo.humidity}%</p>
+            <div class="weather-result">
+                <div class="weather-city">날씨 피드: ${cityName}</div>
+                <div class="weather-info">
+                    <p>🌡️ 기온: ${weatherInfo.temp}°C</p>
+                    <p>💧 습도: ${weatherInfo.humidity}%</p>
+                    <p>🌬️ 바람: ${weatherInfo.wind}km/h</p>
+                </div>
             </div>
         `;
     } else {

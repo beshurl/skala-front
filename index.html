@@ -70,6 +70,13 @@
 						<div id="weather-box">
 							<p>도시를 선택하면 좌표가 표시됩니다.</p>
 						</div>
+						<label for="windy-selectBox">표시 정보</label>
+						<select id="windy-selectBox">
+							<option value="wind">바람</option>
+							<option value="temp">기온</option>
+							<option value="pressure">기압</option>
+						</select>
+						<div id="windy"></div>
 					</article>
 				</section>
 				<section class="page-section section-game">
@@ -117,6 +124,9 @@
 		<script src="./script/speedQuiz.js"></script>
 		<script src="./script/catchButton.js"></script>
 		<script type="module" src="./script/realTimeInfo.js"></script>
+		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+		<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+		<script src="./script/windyMap.js"></script>
 
 </body>
 

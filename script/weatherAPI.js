@@ -1,5 +1,5 @@
 export async function getLiveWeather(lat, lon) {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`;
     
     try {
         const response = await fetch(url);
@@ -9,7 +9,8 @@ export async function getLiveWeather(lat, lon) {
         
         return {
             temp: data.current.temperature_2m,
-            humidity: data.current.relative_humidity_2m
+            humidity: data.current.relative_humidity_2m,
+            wind: data.current.wind_speed_10m
         };
     } catch (error) {
         console.error("API 모듈 에러:", error);
